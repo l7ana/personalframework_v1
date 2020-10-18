@@ -5,20 +5,14 @@ button {
     font-family: $type-body;
 }
 
-.blue {
-    background: url(img/60x40_blue_round.png) no-repeat;
-    color: #ffffff;
-    cursor: pointer;
-}
-
 button, 
 a.button {
     display: inline-block;
-    background-color: $type-color-links;
     color: #ffffff;
     padding: .75em 1em;
     margin: .5em 0 .5em 0;
-    border: 1.5px solid $type-color-links;
+    border: 1.5px solid $blue;
+    border-radius: 1.5em;
     cursor: pointer;
     line-height: 1em;
     text-decoration:none;
@@ -26,6 +20,8 @@ a.button {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+
+.blue {background-color: $blue;}
 
 button.alt, 
 a.button.alt {

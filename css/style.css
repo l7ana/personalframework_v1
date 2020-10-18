@@ -62,23 +62,23 @@ span {
   font-weight: 900;
 }
 
-.blue {
+.blue-type {
   color: #0488A6;
 }
 
-.turq {
+.turq-type {
   color: #5BCBBC;
 }
 
-.yellow {
+.yellow-type {
   color: #F2E84B;
 }
 
-.yellow-dk {
+.yellow-dk-type {
   color: #D9CF2A;
 }
 
-.pink {
+.pink-type {
   color: #FF6E6D;
 }
 
@@ -158,26 +158,24 @@ button {
   font-family: "canada-type-gibson", sans-serif;
 }
 
-.blue {
-  background: url(img/60x40_blue_round.png) no-repeat;
-  color: #ffffff;
-  cursor: pointer;
-}
-
 button,
 a.button {
   display: inline-block;
-  background-color: #2f4193;
   color: #ffffff;
   padding: 0.75em 1em;
   margin: 0.5em 0 0.5em 0;
-  border: 1.5px solid #2f4193;
+  border: 1.5px solid #0488A6;
+  border-radius: 1.5em;
   cursor: pointer;
   line-height: 1em;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.blue {
+  background-color: #0488A6;
 }
 
 button.alt,
