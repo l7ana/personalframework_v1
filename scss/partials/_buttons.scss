@@ -5,6 +5,12 @@ button {
     font-family: $type-body;
 }
 
+.blue {
+    background: url(img/60x40_blue_round.png) no-repeat;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 button, 
 a.button {
     display: inline-block;
@@ -16,6 +22,9 @@ a.button {
     cursor: pointer;
     line-height: 1em;
     text-decoration:none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 button.alt, 

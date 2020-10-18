@@ -58,9 +58,34 @@ h1, h2, h3 {
   font-weight: 400;
 }
 
+span {
+  font-weight: 900;
+}
+
+.blue {
+  color: #0488A6;
+}
+
+.turq {
+  color: #5BCBBC;
+}
+
+.yellow {
+  color: #F2E84B;
+}
+
+.yellow-dk {
+  color: #D9CF2A;
+}
+
+.pink {
+  color: #FF6E6D;
+}
+
 h4, h5 {
   font-family: "aesthet-nova", serif;
   font-weight: 700;
+  color: #0488A6;
 }
 
 h1 {
@@ -108,14 +133,6 @@ hr {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.headline {
-  color: #16AE58;
-}
-
-.subheadline {
-  color: rgba(0, 0, 0, 0.75);
-}
-
 .text-centered {
   text-align: center;
 }
@@ -136,19 +153,43 @@ hr {
   letter-spacing: 0.2em;
 }
 
-.sectionhead:after {
-  display: block;
-  content: "";
-  width: 50px;
-  border: 4px solid #16AE58;
-  margin: 1em auto 6em auto;
+button {
+  font-size: inherit;
+  font-family: "canada-type-gibson", sans-serif;
 }
 
-a {
+.blue {
+  background: url(img/60x40_blue_round.png) no-repeat;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button,
+a.button {
+  display: inline-block;
+  background-color: #2f4193;
+  color: #ffffff;
+  padding: 0.75em 1em;
+  margin: 0.5em 0 0.5em 0;
+  border: 1.5px solid #2f4193;
+  cursor: pointer;
+  line-height: 1em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+button.alt,
+a.button.alt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1.5px solid #061766;
   color: #2f4193;
 }
 
-a:hover {
-  color: #061766;
-  font-weight: 500;
+button:hover,
+a.button:hover {
+  background-color: #061766;
+  color: #ffffff;
+  border: 1.5px solid #061766;
 }
