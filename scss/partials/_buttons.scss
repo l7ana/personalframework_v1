@@ -1,0 +1,33 @@
+// BUTTONS
+
+button {
+    font-size: inherit;
+    font-family: $type-body;
+}
+
+button, 
+a.button {
+    display: inline-block;
+    background-color: $type-color-links;
+    color: #ffffff;
+    padding: .75em 1em;
+    margin: .5em 0 .5em 0;
+    border: 1.5px solid $type-color-links;
+    cursor: pointer;
+    line-height: 1em;
+    text-decoration:none;
+}
+
+button.alt, 
+a.button.alt {
+    background-color: rgba(255,255,255,0);
+    border: 1.5px solid $type-color-links-2;
+    color: $type-color-links;
+}
+
+button:hover,
+a.button:hover {
+    background-color: $type-color-links-2;
+    color: #ffffff;
+    border: 1.5px solid $type-color-links-2;
+}
