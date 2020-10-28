@@ -19,27 +19,17 @@ body {
 
 .container {
     margin: 0 auto;
+    max-width: 1100px;
     padding: 0 4%;
 }
 
-// SMALL/Mobile+
-@media (max-width: $breakpoint-small - 1) {
-    body {font-size: 88.75%;}
-}
+// Responsive Type
+body { font-size: 87.5%; }
 
-// MEDIUM/Tablet
 @media (min-width: $breakpoint-small) {
-    body {font-size: 100%;}
+    body { font-size: 100%; }  
 }
 
-// LARGE/Desktop
-@media (min-width: $breakpoint-medium) {
-    body {font-size: 100%;}
-    .container { max-width: $breakpoint-medium;}
-}
-
-// EXTRALARGE/Desktop+
 @media (min-width: $breakpoint-large) {
-    body {font-size: 112.5%;}
-    .container {max-width: $breakpoint-large;}
+    body { font-size: 112.5%;  }  
 }
