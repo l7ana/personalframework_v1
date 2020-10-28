@@ -43,6 +43,12 @@ header, footer, aside, nav, main, figure, section, article {
   display: block;
 }
 
+.hide-visually {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
 body {
   font-family: "canada-type-gibson", sans-serif;
   font-weight: 200;
@@ -274,6 +280,11 @@ body {
   max-width: none;
 }
 
+.site-identity {
+  display: flex;
+  align-items: center;
+}
+
 .site-header,
 .site-footer {
   padding: 0.5em;
@@ -283,6 +294,10 @@ body {
 .site-footer a {
   color: #fff;
   text-decoration: none;
+}
+
+.logo {
+  max-width: 170px;
 }
 
 .site-footer {

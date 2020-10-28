@@ -26,6 +26,7 @@ $breakpoint-medium: 1050px;
 $breakpoint-large: 1250px;
 
 @import "partials/toc";
+@import "partials/helpers";
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/media";
