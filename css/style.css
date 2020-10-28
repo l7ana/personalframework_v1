@@ -70,18 +70,6 @@ span {
   color: #5BCBBC;
 }
 
-.yellow-type {
-  color: #F2E84B;
-}
-
-.yellow-dk-type {
-  color: #D9CF2A;
-}
-
-.pink-type {
-  color: #FF6E6D;
-}
-
 h4, h5 {
   font-family: "aesthet-nova", serif;
   font-weight: 700;
@@ -158,36 +146,93 @@ button {
   font-family: "canada-type-gibson", sans-serif;
 }
 
-button,
+.button,
 a.button {
+  background-image: url(../../img/buttons/pink_round_1.png);
+  background-repeat: no-repeat;
   display: inline-block;
+  height: 40px;
+  width: 96px;
   color: #ffffff;
-  padding: 0.75em 1em;
-  margin: 0.5em 0 0.5em 0;
-  border: 1.5px solid #0488A6;
-  border-radius: 1.5em;
-  cursor: pointer;
-  line-height: 1em;
   text-decoration: none;
   font-weight: 600;
+  font-size: 75%;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  justify-content: center;
+  text-align: center;
+  line-height: 40px;
+  margin: 0.5em 0.5em 1em 0em;
 }
-
-.blue {
-  background-color: #0488A6;
+.button:hover,
+a.button:hover {
+  background-image: url(../../img/buttons/pink_round_2.png);
 }
 
 button.alt,
 a.button.alt {
-  background-color: rgba(255, 255, 255, 0);
-  border: 1.5px solid #061766;
-  color: #2f4193;
+  background-image: url(../../img/buttons/pink_round_3.png);
+  color: #FF6E6D;
+}
+button.alt:hover,
+a.button.alt:hover {
+  background-image: url(../../img/buttons/pink_round_4.png);
 }
 
-button:hover,
-a.button:hover {
-  background-color: #061766;
-  color: #ffffff;
-  border: 1.5px solid #061766;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 
+MEDIA QUERIES (Mobile First)
+    #DEFAULT/Mobile
+    #SMALL/Mobile+ - (max-width: 767px)
+    #MEDIUM/Tablet - (min-width:768px)
+    #LARGE/Desktop - (min-width: 1050px)
+    #EXTRALARGE/Desktop+ - (min-width: 1250px)
+
+*/
+/* LAYOUT */
+body {
+  margin: 0;
+  font-size: 88.75%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 88.75%;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+}
+@media (min-width: 1050px) {
+  body {
+    font-size: 100%;
+  }
+
+  .container {
+    max-width: 1050px;
+  }
+}
+@media (min-width: 1250px) {
+  body {
+    font-size: 112.5%;
+  }
+
+  .container {
+    max-width: 1250px;
+  }
 }

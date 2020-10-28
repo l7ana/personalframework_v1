@@ -5,34 +5,33 @@ button {
     font-family: $type-body;
 }
 
-button, 
+.button,
 a.button {
+    background-image: url(../../img/buttons/pink_round_1.png);
+    background-repeat: no-repeat;
     display: inline-block;
+    height: 40px;
+    width: 96px;
     color: #ffffff;
-    padding: .75em 1em;
-    margin: .5em 0 .5em 0;
-    border: 1.5px solid $blue;
-    border-radius: 1.5em;
-    cursor: pointer;
-    line-height: 1em;
     text-decoration:none;
     font-weight: 600;
+    font-size: 75%;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    margin: .5em .5em 1em 0em;
+    &:hover {
+        background-image: url(../../img/buttons/pink_round_2.png);
+    }
 }
-
-.blue {background-color: $blue;}
 
 button.alt, 
 a.button.alt {
-    background-color: rgba(255,255,255,0);
-    border: 1.5px solid $type-color-links-2;
-    color: $type-color-links;
-}
-
-button:hover,
-a.button:hover {
-    background-color: $type-color-links-2;
-    color: #ffffff;
-    border: 1.5px solid $type-color-links-2;
+    background-image: url(../../img/buttons/pink_round_3.png);
+    color: $pink;
+    &:hover {
+        background-image: url(../../img/buttons/pink_round_4.png);
+    }
 }

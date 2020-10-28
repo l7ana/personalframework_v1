@@ -1,0 +1,45 @@
+* {box-sizing: border-box;}
+
+/* 
+MEDIA QUERIES (Mobile First)
+    #DEFAULT/Mobile
+    #SMALL/Mobile+ - (max-width: 767px)
+    #MEDIUM/Tablet - (min-width:768px)
+    #LARGE/Desktop - (min-width: 1050px)
+    #EXTRALARGE/Desktop+ - (min-width: 1250px)
+
+*/
+
+/* LAYOUT */
+
+body {
+    margin: 0;
+    font-size: 88.75%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+// SMALL/Mobile+
+@media (max-width: $breakpoint-small - 1) {
+    body {font-size: 88.75%;}
+}
+
+// MEDIUM/Tablet
+@media (min-width: $breakpoint-small) {
+    body {font-size: 100%;}
+}
+
+// LARGE/Desktop
+@media (min-width: $breakpoint-medium) {
+    body {font-size: 100%;}
+    .container { max-width: $breakpoint-medium;}
+}
+
+// EXTRALARGE/Desktop+
+@media (min-width: $breakpoint-large) {
+    body {font-size: 112.5%;}
+    .container {max-width: $breakpoint-large;}
+}
