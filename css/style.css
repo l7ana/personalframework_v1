@@ -49,6 +49,10 @@ header, footer, aside, nav, main, figure, section, article {
   left: -9999px;
 }
 
+.headline .clamp {
+  font-size: clamp(1.5em, 7vw, 5em);
+}
+
 body {
   font-family: "canada-type-gibson", sans-serif;
   font-weight: 200;
