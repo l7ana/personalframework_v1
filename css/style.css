@@ -151,6 +151,50 @@ hr {
   letter-spacing: 0.2em;
 }
 
+.site-header .site-nav .menu-button {
+  color: #0488A6;
+  font-size: 1.5em;
+  z-index: 20;
+  position: relative;
+  cursor: pointer;
+}
+.site-header .site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #EFFAF9;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(100%, 0);
+  transition: all 0.5s ease-out;
+}
+.site-header .site-nav li {
+  font-size: 4vw;
+  min-width: 20vw;
+}
+.site-header .site-nav[data-navstate=open] ul {
+  transform: translate(0, 0);
+}
+
+.site-footer .site-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .site-nav a {
+  display: block;
+  padding: 1em;
+  color: #0488A6;
+}
+
 button {
   font-size: inherit;
   font-family: "canada-type-gibson", sans-serif;
@@ -158,7 +202,7 @@ button {
 
 .button,
 a.button {
-  background-image: url(../../img/buttons/pink_round_1.png);
+  background-image: url(../img/buttons/pink_round_1.png);
   background-repeat: no-repeat;
   display: inline-block;
   height: 40px;
@@ -176,17 +220,17 @@ a.button {
 }
 .button:hover,
 a.button:hover {
-  background-image: url(../../img/buttons/pink_round_2.png);
+  background-image: url(../img/buttons/pink_round_2.png);
 }
 
 button.alt,
 a.button.alt {
-  background-image: url(../../img/buttons/pink_round_3.png);
+  background-image: url(../img/buttons/pink_round_3.png);
   color: #FF6E6D;
 }
 button.alt:hover,
 a.button.alt:hover {
-  background-image: url(../../img/buttons/pink_round_4.png);
+  background-image: url(../img/buttons/pink_round_4.png);
 }
 
 img {
@@ -292,7 +336,7 @@ body {
 }
 .site-header a,
 .site-footer a {
-  color: #fff;
+  color: #0488A6;
   text-decoration: none;
 }
 
@@ -321,18 +365,6 @@ body {
 .site-header .site-identity h1 a {
   display: block;
   padding: 0.5em;
-}
-
-.site-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.site-nav a {
-  display: block;
-  padding: 1em;
-  color: #0488A6;
 }
 
 .site-footer {

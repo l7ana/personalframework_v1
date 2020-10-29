@@ -7,7 +7,7 @@ button {
 
 .button,
 a.button {
-    background-image: url(../../img/buttons/pink_round_1.png);
+    background-image: url(../img/buttons/pink_round_1.png);
     background-repeat: no-repeat;
     display: inline-block;
     height: 40px;
@@ -23,15 +23,15 @@ a.button {
     line-height: 40px;
     margin: .5em .5em 1em 0em;
     &:hover {
-        background-image: url(../../img/buttons/pink_round_2.png);
+        background-image: url(../img/buttons/pink_round_2.png);
     }
 }
 
 button.alt, 
 a.button.alt {
-    background-image: url(../../img/buttons/pink_round_3.png);
+    background-image: url(../img/buttons/pink_round_3.png);
     color: $pink;
     &:hover {
-        background-image: url(../../img/buttons/pink_round_4.png);
+        background-image: url(../img/buttons/pink_round_4.png);
     }
 }

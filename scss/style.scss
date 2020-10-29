@@ -19,6 +19,7 @@ $yellow: #F2E84B;
 $pink: #FF6E6D;
 $yellow-dk: #D9CF2A;
 $yellow-lt: #fdfac6;
+$blue-lt: #EFFAF9;
 
 // BREAKPOINT
 $breakpoint-small: 768px;
@@ -28,6 +29,7 @@ $breakpoint-large: 1250px;
 @import "partials/toc";
 @import "partials/helpers";
 @import "partials/typography";
+@import "partials/sitenav";
 @import "partials/buttons";
 @import "partials/media";
 @import "partials/layout";
