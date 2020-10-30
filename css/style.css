@@ -49,8 +49,12 @@ header, footer, aside, nav, main, figure, section, article {
   left: -9999px;
 }
 
-.headline .clamp {
-  font-size: clamp(1.5em, 7vw, 5em);
+.headline {
+  font-size: 13vw;
+}
+
+.headline.clamp {
+  font-size: clamp(1.5em, 10vw, 6em);
 }
 
 body {
@@ -156,11 +160,30 @@ hr {
 }
 
 .site-header .site-nav .menu-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.75em;
   color: #0488A6;
   font-size: 1.5em;
   z-index: 20;
   position: relative;
   cursor: pointer;
+}
+.site-header .site-nav .menu-button::after {
+  content: "";
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5em;
+  background-image: url(../img/paw.svg);
+  background-size: contain;
+  width: 1.25em;
+  height: 1.25em;
+  transform: rotate(0deg);
+  transition: 0.2s all ease-out;
+}
+.site-header .site-nav svg {
+  fill: #EFFAF9;
 }
 .site-header .site-nav ul {
   list-style: none;
@@ -177,11 +200,24 @@ hr {
   justify-content: center;
   align-items: center;
   transform: translate(100%, 0);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 .site-header .site-nav li {
   font-size: 4vw;
   min-width: 20vw;
+}
+.site-header .site-nav[data-navstate=open] .menu-button:after {
+  content: "";
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5em;
+  background-image: url(../img/x-02.svg);
+  background-size: contain;
+  width: 1.25em;
+  height: 1.25em;
+  transform: rotate(-90deg);
+  transition: 0.2s all ease-out;
 }
 .site-header .site-nav[data-navstate=open] ul {
   transform: translate(0, 0);

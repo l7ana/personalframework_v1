@@ -1,11 +1,30 @@
 .site-header .site-nav {
     .menu-button {
+        position: absolute;
+        top: .5em;
+        right: .75em;
         color: $blue;
         font-size: 1.5em;
         z-index: 20;
         position: relative;
         cursor: pointer;
+        &::after {
+            content: "";
+            line-height: 1;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            background-image: url(../img/paw.svg);
+            background-size: contain;
+            width: 1.25em;
+            height: 1.25em;
+            transform: rotate(0deg);
+            transition: .2s all ease-out;
+            }
     }
+
+    svg {fill:$blue-lt;}
+    
     ul {
         list-style: none;
         margin: 0;
@@ -21,13 +40,26 @@
         justify-content: center;
         align-items: center;
         transform: translate(100%,0);
-        transition:all .5s ease-out;
+        transition:all .3s ease-out;
     }
     li {
         font-size: 4vw;
         min-width: 20vw;
     }
     &[data-navstate="open"] {
+        .menu-button:after {
+                content: "";
+            line-height: 1;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            background-image: url(../img/x-02.svg);
+            background-size: contain;
+            width: 1.25em;
+            height: 1.25em;
+            transform: rotate(-90deg);
+            transition: .2s all ease-out;
+        }
         ul {
           transform: translate(0,0);
         }

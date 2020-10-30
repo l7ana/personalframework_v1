@@ -6,8 +6,8 @@
     left: -9999px;
 }
 
-.headline {
-    .clamp{
-        font-size: clamp(1.5em, 7vw, 5em);
-    }
+.headline {font-size: 13vw;}
+
+.headline.clamp {
+    font-size: clamp(1.5em, 10vw, 6em);
 }
