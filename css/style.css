@@ -160,7 +160,6 @@ hr {
 }
 
 .site-header .site-nav .menu-button {
-  position: absolute;
   top: 0.5em;
   right: 0.75em;
   color: #0488A6;
@@ -201,6 +200,7 @@ hr {
   align-items: center;
   transform: translate(100%, 0);
   transition: all 0.3s ease-out;
+  z-index: 1;
 }
 .site-header .site-nav li {
   font-size: 4vw;
@@ -216,8 +216,10 @@ hr {
   background-size: contain;
   width: 1.25em;
   height: 1.25em;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   transition: 0.2s all ease-out;
+  z-index: 2;
+  position: relative;
 }
 .site-header .site-nav[data-navstate=open] ul {
   transform: translate(0, 0);
@@ -326,6 +328,9 @@ body {
 .row.swapped {
   flex-direction: row-reverse;
 }
+.row.stacked {
+  flex-direction: column;
+}
 
 .row > .column {
   flex-grow: 0;
@@ -424,4 +429,108 @@ section {
   min-height: 100vh;
   display: grid;
   place-items: center;
+}
+
+/* Animations */
+.hero .container *,
+.hero[data-sectionstate=inactive] .container * {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+.hero .container *:nth-child(1),
+.hero[data-sectionstate=inactive] .container *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.hero .container *:nth-child(2),
+.hero[data-sectionstate=inactive] .container *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.hero .container *:nth-child(3),
+.hero[data-sectionstate=inactive] .container *:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.hero .container *:nth-child(4),
+.hero[data-sectionstate=inactive] .container *:nth-child(4) {
+  transition-delay: 0.7s;
+}
+.hero[data-sectionstate=active] .container *,
+.hero[data-sectionstate=inactive][data-sectionstate=active] .container * {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+#section1 .one-half:nth-child(1) {
+  transition: all 0.7s ease-out;
+  transform: translate(-50px, 0);
+}
+#section1[data-sectionstate=active] .one-half:nth-child(1) {
+  transform: translate(0, 0);
+}
+#section1 .one-half:nth-child(2) {
+  transition: all 0.7s ease-out;
+  transform: translate(50px, 0);
+}
+#section1[data-sectionstate=active] .one-half:nth-child(2) {
+  transform: translate(0, 0);
+}
+
+#section2 .one-half:nth-child(1) {
+  transition: all 0.7s ease-out;
+  transform: translate(-50px, -50px);
+}
+#section2[data-sectionstate=active] .one-half:nth-child(1) {
+  transform: translate(0, 0);
+}
+
+.animate-scale-in,
+[data-sectionstate=inactive] .animate-scale-in {
+  transition: all 1s ease-out;
+  opacity: 0;
+  scale: 0.8;
+}
+
+[data-sectionstate=active] .animate-scale-in {
+  opacity: 1;
+  scale: 1;
+}
+
+.animate-slide-up,
+[data-sectionstate=inactive] .animate-scale-in {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translate(0, 100px);
+}
+
+[data-sectionstate=active] .animate-slide-up {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.animate-drop-in-delay *,
+.animate-drop-in-delay[data-sectionstate=inactive] * {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+.animate-drop-in-delay *:nth-child(1),
+.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.animate-drop-in-delay *:nth-child(2),
+.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.animate-drop-in-delay *:nth-child(3),
+.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.animate-drop-in-delay *:nth-child(4),
+.animate-drop-in-delay[data-sectionstate=inactive] *:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+[data-sectionstate=active] .animate-drop-in-delay * {
+  opacity: 1;
+  transform: translate(0, 0);
 }
